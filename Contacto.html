@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamEmporium</title>
+    <link rel="stylesheet" href="estilo17.css" type="text/css" media="all">
+</head>
+<body>
+    <header alt="header">
+
+    </header>
+
+    <section class="contact-form container">
+        <h2>Sugerencias</h2>
+        <form id="contactForm">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="comment">Comentario:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="script prueba.js"></script>
+
+    <script>
+  
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const comment = document.getElementById("comment").value;
+
+            alert(`Comentario enviado por ${username}:\n${comment}`);
+
+            document.getElementById("username").value = "";
+            document.getElementById("comment").value = "";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="estilo17.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form" action="index.html" method="post">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.value !== 'averius') {
+                e.preventDefault(); // Prevent form submission
+                alert('Contraseña incorrecta. Inténtalo de nuevo.');
+                passwordInput.value = ''; // Clear the password field
+            }
+        });
+    </script>
+</body>
+
+</html>
